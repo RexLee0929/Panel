@@ -1,0 +1,104 @@
+# Clash for Windows By Rex
+# port: 7890
+# socks-port: 7891
+# redir-port: 7892
+# tproxy-port: 7893
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+
+
+
+proxies:
+
+proxy-groups:
+  - { name: 'PROXY', type: select, proxies: ['DIRECT', 'Rex Cloud','Hong Kong','United States','Singapore'] }
+  - { name: 'Rex Cloud', type: select, proxies: [] }
+  - { name: 'Hong Kong', type: select, proxies: [/Hong Kong/] }
+  - { name: 'United States', type: select, proxies: [/United States/] }
+  - { name: 'Singapore', type: select, proxies: [/Singapore/] }
+  - { name: 'Netflix', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
+  - { name: 'Disney Plus', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
+  - { name: 'Microsoft', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
+  - { name: 'PayPal', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
+  - { name: 'Steam', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
+  - { name: 'Apple', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']} 
+  
+rules:
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Disney Plus,Disney Plus
+  - RULE-SET,YouTube,PROXY
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Steam,Steam
+ # LAN
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
+  
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml'
+    path: ./Rules/Apple
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/YouTube.yaml'
+    path: ./Rules/Media/YouTube
+    interval: 86400
+  Disney Plus:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Disney%20Plus.yaml'
+    path: ./Rules/Media/Disney_Plus
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Microsoft.yaml'
+    path: ./Rules/Microsoft
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Netflix.yaml'
+    path: ./Rules/Media/Netflix
+    interval: 86400
+  PayPal:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/PayPal.yaml'
+    path: ./Rules/PayPal
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Steam.yaml'
+    path: ./Rules/Steam
+    interval: 86400
+  PROXY:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Proxy.yaml'
+    path: ./Rules/Proxy
+    interval: 86400
+  Reject:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Reject.yaml'
+    path: ./Rules/Reject
+    interval: 86400
