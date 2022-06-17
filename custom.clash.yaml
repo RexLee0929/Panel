@@ -20,12 +20,12 @@ proxy-groups:
   - { name: 'Hong Kong', type: select, proxies: [/Hong Kong/] }
   - { name: 'United States', type: select, proxies: [/United States/] }
   - { name: 'Singapore', type: select, proxies: [/Singapore/] }
-  - { name: 'Netflix', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
-  - { name: 'Disney Plus', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
-  - { name: 'Microsoft', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
-  - { name: 'PayPal', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
-  - { name: 'Steam', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']}
-  - { name: 'Apple', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Rex Cloud','Singapore','Hong Kong','United States']} 
+  - { name: 'Netflix', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
+  - { name: 'Disney Plus', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
+  - { name: 'Microsoft', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
+  - { name: 'PayPal', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
+  - { name: 'Steam', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
+  - { name: 'Apple', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
   
 rules:
   - RULE-SET,Apple,Apple
