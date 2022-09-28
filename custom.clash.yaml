@@ -15,7 +15,7 @@ external-controller: 127.0.0.1:9090
 proxies:
 
 proxy-groups:
-  - { name: 'PROXY', type: select, proxies: ['DIRECT', 'Rex Cloud','Hong Kong','United States','Singapore'] }
+  - { name: 'PROXY', type: select, proxies: [/Rex最帅/,'DIRECT', 'Rex Cloud','Hong Kong','United States','Singapore'] }
   - { name: 'Rex Cloud', type: select, proxies: [] }
   - { name: 'Hong Kong', type: select, proxies: [/Hong Kong/] }
   - { name: 'United States', type: select, proxies: [/United States/] }
@@ -36,6 +36,7 @@ rules:
   - RULE-SET,Netflix,Netflix
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Steam,Steam
+  - RULE-SET,ChineseWebsite,DIRECT
  # LAN
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
@@ -54,6 +55,12 @@ rule-providers:
     behavior: classical
     url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml'
     path: ./Rules/Apple
+    interval: 86400
+  ChineseWebsite:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/Rex0929/Rules/main/ChineseWebsite.yaml'
+    path: ./Rules/ChineseWebsite
     interval: 86400
   YouTube:
     type: http
