@@ -20,9 +20,10 @@ proxy-groups:
   - { name: 'Hong Kong', type: select, proxies: [/Hong Kong/] }
   - { name: 'United States', type: select, proxies: [/United States/] }
   - { name: 'Singapore', type: select, proxies: [/Singapore/] }
-  - { name: 'Download', type: select, proxies: [/Hong/,/United/,/Singapore/,/Japan/,/Luxemburg/] }
+  - { name: 'Download', type: select, proxies: ['DIRECT',/Hong/,/United/,/Singapore/,/Japan/,/Luxemburg/] }
   - { name: 'Netflix', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong']}
   - { name: 'Disney Plus', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
+  - { name: 'Telegram', type: select, proxies: [/Rex最帅/,'PROXY','Download']}
   - { name: 'Microsoft', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Download']}
   - { name: 'PayPal', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','United States']}
   - { name: 'Steam', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY']}
@@ -35,6 +36,7 @@ rules:
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Netflix,Netflix
   - RULE-SET,PayPal,PayPal
+  - RULE-SET,Telegram,Telegram
   - RULE-SET,Steam,Steam
   - RULE-SET,Domestic,DIRECT
 #  - RULE-SET,ChineseWebsite,DIRECT
@@ -112,6 +114,12 @@ rule-providers:
     behavior: classical
     url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Steam.yaml'
     path: ./Rules/Steam
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Telegram.yaml'
+    path: ./Rules/Telegram
     interval: 86400
   PROXY:
     type: http
