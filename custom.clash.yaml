@@ -20,7 +20,7 @@ proxy-groups:
   - { name: 'Hong Kong', type: select, proxies: [/Hong Kong/] }
   - { name: 'United States', type: select, proxies: [/United States/] }
   - { name: 'Singapore', type: select, proxies: [/Singapore/] }
-  - { name: 'Download', type: select, proxies: ['DIRECT',/Hong/,/United/,/Singapore/,/Japan/,/Luxemburg/] }
+  - { name: 'Download', type: select, proxies: ['DIRECT',/ZL/,/Vmess/] }
   - { name: 'Netflix', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong']}
   - { name: 'Disney Plus', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States']}
   - { name: 'Telegram', type: select, proxies: [/Rex最帅/,'PROXY','Download']}
