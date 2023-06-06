@@ -8,9 +8,7 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-ipv6: false
-external-controller: 127.0.0.1:9290
-
+ipv6: true
 
 
 proxies:
@@ -23,11 +21,11 @@ proxy-groups:
   - { name: 'Singapore', type: select, proxies: [/Singapore/,'DIRECT'] }
   - { name: 'Japan', type: select, proxies: [/Japan/,'DIRECT'] }
   - { name: 'Download', type: select, proxies: ['DIRECT',//] }
-  - { name: 'OpenAI', type: select, proxies: [/OP/,'DIRECT'] }
+  - { name: 'OpenAI', type: select, proxies: [/🇺🇸United States 广港/,/🇱🇺Luxemburg 广港/,/🇸🇬Singapore 广港/,/OP/,'DIRECT'] }
+  - { name: 'Telegram', type: select, proxies: [//]}
   - { name: 'Game', type: select, proxies: [/Rex最帅/,'PROXY','Hong Kong','Singapore','Japan'] }
   - { name: 'Netflix', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','Japan']}
   - { name: 'Disney Plus', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Singapore','Hong Kong','United States','Japan']}
-  - { name: 'Telegram', type: select, proxies: [/Rex最帅/,'PROXY','Download']}
   - { name: 'OneDrive', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Hong Kong','Singapore','United States','Japan','Download']}
   - { name: 'Microsoft', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','Hong Kong','Singapore','United States','Japan','Download']}
   - { name: 'PayPal', type: select, proxies: [/Rex最帅/,'DIRECT','PROXY','United States']}
@@ -36,8 +34,6 @@ proxy-groups:
 
   
 rules:
-  - RULE-SET,Game,Game
-  - RULE-SET,Xbox,Game
   - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Apple,Apple
   - RULE-SET,Disney Plus,Disney Plus
@@ -69,7 +65,7 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
 
   - GEOIP,CN,DIRECT
-  - PROCESS-NAME,fjava.exe,Hong Kong
+  - PROCESS-NAME,fjava.exe,PROXY
   - MATCH,PROXY
   
 rule-providers:
@@ -97,12 +93,6 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
-#  ChineseWebsite:
-#    type: http
-#    behavior: classical
-#    url: 'https://raw.githubusercontent.com/Rex0929/Rules/main/ChineseWebsite.yaml'
-#    path: ./Rules/ChineseWebsite
-#    interval: 86400
   Domestic:
     type: http
     behavior: classical
