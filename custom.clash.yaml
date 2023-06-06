@@ -46,7 +46,6 @@ rules:
   - RULE-SET,Steam,Steam
   - RULE-SET,Domestic,DIRECT
   - RULE-SET,PROXY,PROXY
-#  - RULE-SET,ChineseWebsite,DIRECT
   # > banzhu
   - DOMAIN-SUFFIX,diyibanzhu77.com,DIRECT
   - DOMAIN-KEYWORD,diyi,DIRECT
@@ -55,6 +54,7 @@ rules:
   - DOMAIN-KEYWORD,01bz,DIRECT
   - DOMAIN-KEYWORD,tz659,DIRECT
   - DOMAIN-KEYWORD,bz,DIRECT
+  - DOMAIN-KEYWORD,yyds,DIRECT
  # LAN
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
@@ -93,6 +93,12 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
+#  ChineseWebsite:
+#    type: http
+#    behavior: classical
+#    url: 'https://raw.githubusercontent.com/Rex0929/Rules/main/ChineseWebsite.yaml'
+#    path: ./Rules/ChineseWebsite
+#    interval: 86400
   Domestic:
     type: http
     behavior: classical
