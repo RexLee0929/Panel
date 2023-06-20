@@ -45,15 +45,7 @@ rules:
   - RULE-SET,Steam,Steam
   - RULE-SET,Domestic,DIRECT
   - RULE-SET,PROXY,PROXY
-  # > banzhu
-  - DOMAIN-SUFFIX,diyibanzhu77.com,DIRECT
-  - DOMAIN-KEYWORD,diyi,DIRECT
-  - DOMAIN-KEYWORD,banzhu,DIRECT
-  - DOMAIN-KEYWORD,dybz,DIRECT
-  - DOMAIN-KEYWORD,01bz,DIRECT
-  - DOMAIN-KEYWORD,tz659,DIRECT
-  - DOMAIN-KEYWORD,bz,DIRECT
-  - DOMAIN-KEYWORD,yyds,DIRECT
+
  # LAN
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
@@ -71,78 +63,78 @@ rule-providers:
   OpenAI:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/ChatGPT.yaml'
     path: ./Rules/OpenAI
     interval: 86400
   Apple:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
   Domestic:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Domestic.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Domestic.yaml'
     path: ./Rules/Domestic
     interval: 86400
   YouTube:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/YouTube.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/YouTube.yaml'
     path: ./Rules/Media/YouTube
     interval: 86400
   Disney Plus:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Disney%20Plus.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney_Plus
     interval: 86400
   OneDrive:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml'
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml'
     path: ./Rules/OneDrive
     interval: 86400
   Microsoft:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Microsoft.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Microsoft.yaml'
     path: ./Rules/Microsoft
     interval: 86400
   Netflix:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Netflix.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Netflix.yaml'
     path: ./Rules/Media/Netflix
     interval: 86400
   PayPal:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/PayPal.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/PayPal.yaml'
     path: ./Rules/PayPal
     interval: 86400
   Steam:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Steam.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
   Telegram:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Telegram.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Telegram.yaml'
     path: ./Rules/Telegram
     interval: 86400
   PROXY:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Proxy.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
   Reject:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Reject.yaml'
+    url: 'https://dler.cloud/Rules/Clash/Provider/Reject.yaml'
     path: ./Rules/Reject
     interval: 86400
