@@ -44,7 +44,7 @@ rules:
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Steam,Steam
-  - RULE-SET,ProxyS,PROXY
+  - RULE-SET,PROXYS,PROXY
  # LAN
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
@@ -132,5 +132,5 @@ rule-providers:
     type: http
     behavior: classical
     url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Proxy.yaml'
-    path: ./Rules/ProxyS.yaml
+    path: ./Rules/PROXYS.yaml
     interval: 86400
