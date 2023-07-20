@@ -37,6 +37,7 @@ rules:
   - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Apple,Apple
   - RULE-SET,Disney Plus,Disney Plus
+  - RULE-SET,Domestic,DIRECT
   - RULE-SET,YouTube,PROXY
   - RULE-SET,OneDrive,OneDrive
   - RULE-SET,Microsoft,Microsoft
@@ -57,8 +58,7 @@ rules:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
   - DOMAIN-SUFFIX,services.googleapis.cn,PROXY
   
-#  - GEOIP,CN,DIRECT,no-resolve
-  - PROCESS-NAME,fjava.exe,PROXY
+  - GEOIP,CN,DIRECT
   - MATCH,PROXY
   
 rule-providers:
