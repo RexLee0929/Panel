@@ -44,8 +44,6 @@ rules:
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Steam,Steam
-  - RULE-SET,Domestic,DIRECT
-  - RULE-SET,PROXY,PROXY
 
  # LAN
   - DOMAIN-SUFFIX,local,DIRECT
@@ -56,7 +54,7 @@ rules:
   - IP-CIDR,17.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
 
-  - GEOIP,CN,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
   - PROCESS-NAME,fjava.exe,PROXY
   - MATCH,PROXY
   
@@ -126,16 +124,4 @@ rule-providers:
     behavior: classical
     url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Telegram.yaml'
     path: ./Rules/Telegram
-    interval: 86400
-  PROXY:
-    type: http
-    behavior: classical
-    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Proxy.yaml'
-    path: ./Rules/Proxy
-    interval: 86400
-  Reject:
-    type: http
-    behavior: classical
-    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Reject.yaml'
-    path: ./Rules/Reject
     interval: 86400
