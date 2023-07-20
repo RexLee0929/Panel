@@ -14,22 +14,23 @@ ipv6: true
 proxies:
 
 proxy-groups:
-  - { name: 'PROXY', type: select, proxies: ['DIRECT', 'Rex Cloud','Hong Kong','United States','Singapore','Japan',/Rex最帅/] }
+  - { name: 'PROXY', type: select, proxies: ['DIRECT', 'Rex Cloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Direct Serve', /Rex最帅/] }
   - { name: 'Rex Cloud', type: select, proxies: [] }
-  - { name: 'Hong Kong', type: select, proxies: ['DIRECT',/Hong Kong/] }
-  - { name: 'United States', type: select, proxies: ['DIRECT',/United States/] }
-  - { name: 'Singapore', type: select, proxies: ['DIRECT',/Singapore/] }
-  - { name: 'Japan', type: select, proxies: ['DIRECT',/Japan/] }
-  - { name: 'Download', type: select, proxies: ['DIRECT',//] }
-  - { name: 'OpenAI', type: select, proxies: ['DIRECT','Singapore','United States',/OP/] }
-  - { name: 'Telegram', type: select, proxies: ['DIRECT','PROXY','Hong Kong','Singapore','United States',//]}
-  - { name: 'Netflix', type: select, proxies: ['DIRECT','PROXY','Singapore','Hong Kong','Japan',/Rex最帅/]}
-  - { name: 'Disney Plus', type: select, proxies: ['DIRECT','PROXY','Singapore','Hong Kong','United States','Japan',/Rex最帅/]}
-  - { name: 'OneDrive', type: select, proxies: ['DIRECT','PROXY','Hong Kong','Singapore','United States','Japan','Download',/Rex最帅/]}
-  - { name: 'Microsoft', type: select, proxies: ['DIRECT','PROXY','Hong Kong','Singapore','United States','Japan','Download',/Rex最帅/]}
-  - { name: 'PayPal', type: select, proxies: ['DIRECT','PROXY','Singapore','Hong Kong','United States','Japan',/Rex最帅/]}
-  - { name: 'Steam', type: select, proxies:  ['DIRECT','PROXY','Hong Kong','Singapore','United States','Japan','Download',/Rex最帅/]}
-  - { name: 'Apple', type: select, proxies: ['DIRECT','PROXY','Singapore','Hong Kong','United States','Japan',/Rex最帅/]}
+  - { name: 'Direct Serve', type: select, proxies: ['DIRECT', /直连/, /Vmess/] }
+  - { name: 'Hong Kong', type: select, proxies: ['DIRECT', /Hong Kong/] }
+  - { name: 'United States', type: select, proxies: ['DIRECT', /States/] }
+  - { name: 'Singapore', type: select, proxies: ['DIRECT', /Singapore/] }
+  - { name: 'Japan', type: select, proxies: ['DIRECT', /Japan/] }
+  - { name: 'Download', type: select, proxies: ['DIRECT', //] }
+  - { name: 'OpenAI', type: select, proxies: ['DIRECT', 'Singapore', 'United States', /OP/] }
+  - { name: 'Telegram', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'Netflix', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'Disney Plus', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'OneDrive', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'Microsoft', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'PayPal', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'Steam', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'Apple', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
 
   
 rules:
@@ -63,31 +64,31 @@ rule-providers:
   OpenAI:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/ChatGPT.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/OpenAI.yaml'
     path: ./Rules/OpenAI
     interval: 86400
   Apple:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Apple.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
   Domestic:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Domestic.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Domestic.yaml'
     path: ./Rules/Domestic
     interval: 86400
   YouTube:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/YouTube.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Media/YouTube.yaml'
     path: ./Rules/Media/YouTube
     interval: 86400
   Disney Plus:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Disney%20Plus.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney_Plus
     interval: 86400
   OneDrive:
@@ -99,42 +100,42 @@ rule-providers:
   Microsoft:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Microsoft.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Microsoft.yaml'
     path: ./Rules/Microsoft
     interval: 86400
   Netflix:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Netflix.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml'
     path: ./Rules/Media/Netflix
     interval: 86400
   PayPal:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/PayPal.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/PayPal.yaml'
     path: ./Rules/PayPal
     interval: 86400
   Steam:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Steam.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
   Telegram:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Telegram.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Telegram.yaml'
     path: ./Rules/Telegram
     interval: 86400
   PROXY:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Proxy.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
   Reject:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Reject.yaml'
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Reject.yaml'
     path: ./Rules/Reject
     interval: 86400
