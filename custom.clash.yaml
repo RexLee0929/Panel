@@ -16,12 +16,12 @@ proxies:
 proxy-groups:
   - { name: 'PROXY', type: select, proxies: ['DIRECT', 'Rex Cloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Direct Serve', /Rex最帅/] }
   - { name: 'Rex Cloud', type: select, proxies: [] }
-  - { name: 'Direct Serve', type: select, proxies: ['DIRECT', /直连/, /Vmess/] }
   - { name: 'Hong Kong', type: select, proxies: ['DIRECT', /Hong Kong/] }
   - { name: 'United States', type: select, proxies: ['DIRECT', /States/] }
   - { name: 'Singapore', type: select, proxies: ['DIRECT', /Singapore/] }
   - { name: 'Japan', type: select, proxies: ['DIRECT', /Japan/] }
   - { name: 'Download', type: select, proxies: ['DIRECT', //] }
+  - { name: 'Direct Serve', type: select, proxies: ['DIRECT', /直连/, /Vmess/] }
   - { name: 'OpenAI', type: select, proxies: ['DIRECT', 'Singapore', 'United States', /OP/] }
   - { name: 'Telegram', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
   - { name: 'Netflix', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
@@ -37,7 +37,6 @@ rules:
   - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Apple,Apple
   - RULE-SET,Disney Plus,Disney Plus
-  - RULE-SET,Domestic,DIRECT
   - RULE-SET,YouTube,PROXY
   - RULE-SET,OneDrive,OneDrive
   - RULE-SET,Microsoft,Microsoft
