@@ -61,6 +61,8 @@ rules:
   - RULE-SET,Microsoft,Microsoft
 # >TikTok
   - RULE-SET,TikTok,United States
+# >WeChat
+  - RULE-SET,WeChat,DIRECT
 # >BiliBili
   - RULE-SET,BiliBili,DIRECT
 # >Telegram
@@ -73,13 +75,12 @@ rules:
   - RULE-SET,Global,PROXY
   - RULE-SET,Global_Domain,PROXY
 # >China
-  - RULE-SET,ChinaMax,DIRECT
-  - RULE-SET,ChinaMax_Domain,DIRECT
-  - RULE-SET,ChinaMax_IP,DIRECT
+#  - RULE-SET,ChinaMax,DIRECT
+#  - RULE-SET,ChinaMax_Domain,DIRECT
+#  - RULE-SET,ChinaMax_IP,DIRECT
 # >ADs
-  - RULE-SET,Advertising,REJECT
-  - RULE-SET,Advertising_Domain,REJECT
-  
+#  - RULE-SET,Advertising,REJECT
+#  - RULE-SET,Advertising_Domain,REJECT
 # >DNS泄露
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
   - DOMAIN-SUFFIX,services.googleapis.cn,PROXY
@@ -217,6 +218,13 @@ rule-providers:
     behavior: classical
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml'
     path: ./Rules/TikTok.yaml
+    interval: 86400
+# >WeChat
+  WeChat:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml'
+    path: ./Rules/WeChat.yaml
     interval: 86400
 # >BiliBili
   BiliBili:
