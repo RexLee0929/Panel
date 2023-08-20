@@ -12,13 +12,13 @@ proxies:
 proxy-groups:
   - { name: 'PROXY', type: select, proxies: ['DIRECT', 'Rex Cloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Direct Serve', /Rex最帅/] }
   - { name: 'Rex Cloud', type: select, proxies: [] }
+  - { name: 'Game', type: select, proxies: [/Game/, 'DIRECT', 'Rex Cloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Direct Serve', /Rex最帅/] }
   - { name: 'Hong Kong', type: select, proxies: ['DIRECT', /Hong Kong/] }
   - { name: 'United States', type: select, proxies: ['DIRECT', /States/] }
   - { name: 'Singapore', type: select, proxies: ['DIRECT', /Singapore/, /Malaysia/] }
   - { name: 'Japan', type: select, proxies: ['DIRECT', /Japan/] }
   - { name: 'Download', type: select, proxies: ['DIRECT', //] }
   - { name: 'Direct Serve', type: select, proxies: ['DIRECT', /直连/, /Vmess/] }
-  - { name: 'Game', type: select, proxies: ['DIRECT', 'Rex Cloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Direct Serve', /Rex最帅/] }
   - { name: 'OpenAI', type: select, proxies: ['DIRECT', 'Singapore', 'United States', /OP/] }
   - { name: 'YouTube', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
   - { name: 'Telegram', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
@@ -32,13 +32,14 @@ proxy-groups:
 
   
 rules:
-
+# >Steam
+  - RULE-SET,Steam,Steam
 # >Game
   - RULE-SET,Game,Game
 # >GameDownload
   - RULE-SET,GameDownload,Download
 # >GameDownloadCN
-  - RULE-SET,GameDownload,DIRECT
+  - RULE-SET,GameDownloadCN,DIRECT
 # >DNS
   - RULE-SET,DNS,PROXY
 # >OpenAI
@@ -69,8 +70,7 @@ rules:
   - RULE-SET,Telegram,Telegram
 # >Google
   - RULE-SET,Google,PROXY
-# >Steam
-  - RULE-SET,Steam,Steam
+
 # >Global
   - RULE-SET,Global,PROXY
   - RULE-SET,Global_Domain,PROXY
@@ -112,7 +112,7 @@ rules:
   - IP-CIDR,17.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
   
-  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT
   - MATCH,PROXY
   
 rule-providers:
