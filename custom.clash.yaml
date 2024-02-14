@@ -10,28 +10,33 @@ ipv6: true
 proxies:
 
 proxy-groups:
-  - { name: 'PROXY', type: select, proxies: ['DIRECT', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'IPv4', 'IPv6', 'Vmess', /Rex最帅/] }
+  - { name: 'PROXY', type: select, proxies: ['Direct', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', 'IPv4', 'IPv6', 'Vmess', /Rex最帅/] }
+  - { name: 'Direct', type: select, proxies: ['DIRECT', //] }
   - { name: 'RexCloud', type: select, proxies: [] }
-  - { name: 'Game', type: select, proxies: [/Game/, 'DIRECT', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Download', 'IPv4', /Rex最帅/] }
-  - { name: 'Hong Kong', type: select, proxies: ['DIRECT', /Hong Kong/] }
-  - { name: 'United States', type: select, proxies: ['DIRECT', /States/] }
-  - { name: 'Singapore', type: select, proxies: ['DIRECT', /Singapore/, /Malaysia/, /Taiwan/] }
-  - { name: 'Japan', type: select, proxies: ['DIRECT', /Japan/] }
-  - { name: 'Download', type: select, proxies: ['DIRECT', 'IPv4', 'IPv6', 'Vmess', //] }
-  - { name: 'IPv6', type: select, proxies: ['DIRECT', /IPv6/] }
-  - { name: 'IPv4', type: select, proxies: ['DIRECT', /IPv4/] }
-  - { name: 'Vmess', type: select, proxies: ['DIRECT', /Vmess/] }
-  - { name: 'SSH', type: select, proxies: ['DIRECT', //] }
-  - { name: 'OpenAI', type: select, proxies: ['DIRECT', 'Singapore', 'United States', /OP/] }
-  - { name: 'YouTube', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
-  - { name: 'Telegram', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
-  - { name: 'Netflix', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', //] }
-  - { name: 'Disney Plus', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', //] }
-  - { name: 'OneDrive', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
-  - { name: 'Microsoft', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
-  - { name: 'PayPal', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
-  - { name: 'Steam', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
-  - { name: 'Apple', type: select, proxies: ['DIRECT', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Download', /Rex最帅/] }
+  - { name: 'Game', type: select, proxies: [/Game/, 'Direct', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', 'Download', 'IPv4', /Rex最帅/] }
+  - { name: 'Hong Kong', type: select, proxies: ['Direct', /Hong Kong/] }
+  - { name: 'United States', type: select, proxies: ['Direct', /States/] }
+  - { name: 'Singapore', type: select, proxies: ['Direct', /Singapore/] }
+  - { name: 'Japan', type: select, proxies: ['Direct', /Japan/] }
+  - { name: 'Asia', type: select, proxies: ['Direct', /Malaysia/, /Taiwan/] }
+  - { name: 'Europe', type: select, proxies: ['Direct', /Luxemburg/, /Austria/, /Germany/] }
+  - { name: 'IPv4', type: select, proxies: ['Direct', /IPv4/] }
+  - { name: 'IPv6', type: select, proxies: ['Direct', /IPv6/] }
+  - { name: 'Vmess', type: select, proxies: ['Direct', /Vmess/] }
+  - { name: 'SSH', type: select, proxies: ['Direct', //] }
+  - { name: 'OpenAI', type: select, proxies: ['Direct', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', /OP/] }
+  - { name: 'YouTube', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'Telegram', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'Netflix', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', //] }
+  - { name: 'WeChat', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', //] }
+  - { name: 'Disney Plus', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', //] }
+  - { name: 'OneDrive', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'Microsoft', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'PayPal', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'Steam', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'Apple', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
+  - { name: 'Download', type: select, proxies: ['Direct', 'IPv4', 'IPv6', 'Vmess', //] }
+  - { name: 'LOL', type: select, proxies: [/Game/, 'Direct','Asia', /Rex最帅/] }
 
   
 rules:
@@ -71,10 +76,12 @@ rules:
 # >GameDownload
   - RULE-SET,GameDownload,Download
 # >GameDownloadCN
-  - RULE-SET,GameDownloadCN,DIRECT
+  - RULE-SET,GameDownloadCN,Direct
 # >DNS
   - RULE-SET,DNS,PROXY
 # >OpenAI
+  - DOMAIN-SUFFIX,oaistatic.com,OpenAI
+  - DOMAIN-SUFFIX,oaiusercontent.com,OpenAI
   - RULE-SET,OpenAI,OpenAI
 # >Apple
   - IP-CIDR,17.0.0.0/8,Apple
@@ -96,9 +103,9 @@ rules:
 # >TikTok
   - RULE-SET,TikTok,United States
 # >WeChat
-  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,WeChat,WeChat
 # >BiliBili
-  - RULE-SET,BiliBili,DIRECT
+  - RULE-SET,BiliBili,Direct
 # >Telegram
   - RULE-SET,Telegram,Telegram
 # >Google
@@ -106,11 +113,11 @@ rules:
 # >Global
   - RULE-SET,Global,PROXY
 # >China
-#  - RULE-SET,ChinaMax,DIRECT
+#  - RULE-SET,ChinaMax,Direct
 # >ADs
   #- RULE-SET,Advertising,REJECT
 # >Final
-  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,CN,Direct,no-resolve
   - MATCH,PROXY
   
 rule-providers:
