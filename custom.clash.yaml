@@ -13,7 +13,7 @@ proxy-groups:
   - { name: 'PROXY', type: select, proxies: ['Direct', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', 'IPv4', 'IPv6', 'Vmess', /Rex最帅/] }
   - { name: 'Direct', type: select, proxies: ['DIRECT', //] }
   - { name: 'RexCloud', type: select, proxies: [] }
-  - { name: 'Game', type: select, proxies: [/Game/, 'Direct', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', 'Download', 'IPv4', /Rex最帅/] }
+  - { name: 'Game', type: select, proxies: ['Direct','Valorant','LOL', 'RexCloud', 'Hong Kong', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
   - { name: 'Hong Kong', type: select, proxies: ['Direct', /Hong Kong/] }
   - { name: 'United States', type: select, proxies: ['Direct', /States/] }
   - { name: 'Singapore', type: select, proxies: ['Direct', /Singapore/] }
@@ -24,6 +24,8 @@ proxy-groups:
   - { name: 'IPv6', type: select, proxies: ['Direct', /IPv6/] }
   - { name: 'Vmess', type: select, proxies: ['Direct', /Vmess/] }
   - { name: 'SSH', type: select, proxies: ['Direct', //] }
+  - { name: 'Valorant', type: select, proxies: [/Game/, 'RexCloud', 'Hong Kong', 'Singapore', 'Japan', 'Asia', /Rex最帅/] }
+  - { name: 'LOL', type: select, proxies: [/Game/,'Asia', /Rex最帅/] }
   - { name: 'OpenAI', type: select, proxies: ['Direct', 'United States', 'Singapore', 'Japan', 'Asia', 'Europe', /OP/] }
   - { name: 'YouTube', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
   - { name: 'Telegram', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
@@ -36,7 +38,6 @@ proxy-groups:
   - { name: 'Steam', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
   - { name: 'Apple', type: select, proxies: ['Direct', 'PROXY', 'Hong Kong', 'Singapore', 'United States', 'Japan', 'Asia', 'Europe', 'Download', /Rex最帅/] }
   - { name: 'Download', type: select, proxies: ['Direct', 'IPv4', 'IPv6', 'Vmess', //] }
-  - { name: 'LOL', type: select, proxies: [/Game/, 'Direct','Asia', /Rex最帅/] }
 
   
 rules:
